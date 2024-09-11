@@ -53,19 +53,60 @@ body {
             color: #fec913;
         }
 
-    .custom_navbar .navbar-toggler {
-        border: none;
-        background-color: transparent;
+
+/* Custom Toggler Icon for Navbar */
+.navbar-toggler {
+    border: none; /* Remove default border */
+}
+
+.navbar-toggler-icon.custom-toggler-icon {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background-color: white; /* Color of the lines */
+    transition: all 0.3s ease;
+}
+
+    .navbar-toggler-icon.custom-toggler-icon::before,
+    .navbar-toggler-icon.custom-toggler-icon::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: white; /* Color of the lines */
+        position: absolute;
+        transition: all 0.3s ease;
     }
 
-    .custom_navbar .navbar-toggler-icon {
-        background-image: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
-        background-size: cover;
+    .navbar-toggler-icon.custom-toggler-icon::before {
+        top: -8px; /* Position above the middle line */
     }
+
+    .navbar-toggler-icon.custom-toggler-icon::after {
+        top: 8px; /* Position below the middle line */
+    }
+
+/* When Navbar is Open (Show "X" Icon) */
+.navbar-toggler[aria-expanded="true"] .custom-toggler-icon {
+    background-color: transparent; /* Hide the middle line */
+}
+
+    .navbar-toggler[aria-expanded="true"] .custom-toggler-icon::before {
+        transform: rotate(45deg); /* Rotate to form "X" */
+        top: 0; /* Center the top line */
+    }
+
+    .navbar-toggler[aria-expanded="true"] .custom-toggler-icon::after {
+        transform: rotate(-45deg); /* Rotate to form "X" */
+        top: 0; /* Center the bottom line */
+    }
+
 
 @media (max-width: 991px) {
     .custom_navbar .navbar-nav {
         background-color: #000000;
+        color:white;
         padding: 15px;
     }
 
