@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Tech Inc</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Include Bootstrap CSS and JavaScript -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            color: #333;
+            padding-top: 70px;
+        }
+
+      
+        .appointment-section {
+            background-image: url('images/appointment-bg.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            padding: 60px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .appointment-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            z-index: 2;
+        }
+
+        .appointment-container {
+            position: relative;
+            z-index: 3;
+        }
+
+        .appointment-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .appointment-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .appointment-form .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+            .appointment-form .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        .form-control, .form-control:focus {
+            border-color: #ddd;
+            box-shadow: none;
+        }
+
+            .form-control::placeholder {
+                color: #aaa;
+            }
+
+        .appointment-header {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+            .appointment-header h2 {
+                font-size: 36px;
+                font-weight: bold;
+            }
+
+            .appointment-header p {
+                font-size: 18px;
+                color: #ddd;
+            }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+
+    <header class="header_section">
+        <nav class="navbar navbar-expand-lg custom_navbar fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <span>King Tech Inc</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon custom-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ads.html">Flyers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="appointment.html">Make an Appoinment</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Appointment Section -->
+    <section class="appointment-section">
+        <div class="appointment-overlay"></div>
+        <div class="appointment-container container">
+            <div class="appointment-header">
+                <h2>Make an Appointment</h2>
+                <p>Schedule a time with our IT specialists to get the solutions you need.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="appointment-form">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="services">IT Services</label>
+                                <select class="form-control" id="services" required>
+                                    <option value="">Select a Service</option>
+                                    <option value="Network Support">Network Support</option>
+                                    <option value="Web Development">Web Development</option>
+                                    <option value="Security Cameras">Security Cameras</option>
+                                    <option value="Surveillance Systems & Remote Accessibility">Surveillance Systems & Remote Accessibility</option>
+                                    <option value="Website Development & Hosting Services">Website Development & Hosting Services</option>
+                                    <option value="POS Systems">POS Systems</option>
+                                    <option value="Cloud Phone Systems">Cloud Phone Systems</option>
+                                    <option value="Managed IT Services">Managed IT Services</option>
+                                    <option value="Custom Software Development">Custom Software Development</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Preferred Date</label>
+                                <input type="date" class="form-control" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time</label>
+                                <input type="time" class="form-control" id="time" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Additional Information</label>
+                                <textarea class="form-control" id="message" rows="3" placeholder="Provide any additional details..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Submit Appointment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer_section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-md-4">
+                    <h5>About King Tech</h5>
+                    <p>King Technology provides top-notch IT services, from network support to custom software development, to businesses of all sizes.</p>
+                    <ul class="social_links list-inline mt-3">
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#about" class="text-white">About Us</a></li>
+                        <li><a href="#services" class="text-white">Services</a></li>
+                        <li><a href="#portfolio" class="text-white">Portfolio</a></li>
+                        <li><a href="#contact" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info Section -->
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt"></i>  3 N Old State Capitol Plaza, Springfield, IL 62701</li>
+                        <li><i class="fas fa-phone"></i> +1 217-522-6700</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@kingtech.net" class="text-white">info@kingtech.net</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 King Technology Inc. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.custom_navbar');
+
+        window.addEventListener('scroll', function () {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down
+                navbar.style.top = '-80px'; // Hide the navbar by moving it up
+            } else {
+                // Scrolling up
+                navbar.style.top = '0'; // Show the navbar
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scrolling values
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.service_header').forEach(header => {
+            header.addEventListener('click', () => {
+                const description = header.nextElementSibling;
+                const button = header.querySelector('.toggle_button');
+                const serviceItem = header.parentElement;
+
+                if (description.style.display === 'block') {
+                    description.style.display = 'none';
+                    button.textContent = '+';
+                    serviceItem.classList.remove('active');
+                } else {
+                    description.style.display = 'block';
+                    button.textContent = '-';
+                    serviceItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+
+    <!-- Include Bootstrap CSS and JavaScript -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
