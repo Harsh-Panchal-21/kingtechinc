@@ -1,0 +1,470 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff; /* White text color */
+    background-color: #000000; /* Black background */
+    margin-top: 56px; /* Account for fixed navbar */
+}
+
+/* Navigation Bar */
+.custom_navbar {
+    background: linear-gradient(90deg, #000000 0%, #333333 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    transition: top 0.3s ease; /* Smooth transition for show/hide */
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+    .custom_navbar .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .custom_navbar .navbar-nav .nav-link {
+        color: #ffffff;
+        margin: 0 15px;
+        font-weight: 500;
+        font-size: 1rem;
+        text-transform: uppercase;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+        .custom_navbar .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            left: 0;
+            bottom: -5px;
+            background-color: #fec913;
+            transition: width 0.3s ease;
+        }
+
+        .custom_navbar .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .custom_navbar .navbar-nav .nav-link:hover {
+            color: #fec913;
+        }
+
+    .custom_navbar .navbar-toggler {
+        border: none;
+        background-color: transparent;
+    }
+
+    .custom_navbar .navbar-toggler-icon {
+        background-image: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+        background-size: cover;
+    }
+
+@media (max-width: 991px) {
+    .custom_navbar .navbar-nav {
+        background-color: #000000;
+        padding: 15px;
+    }
+
+        .custom_navbar .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+}
+
+
+/* Hero Section */
+.hero_area {
+    height: 100vh; /* Full viewport height */
+    background: url('../images/office.jpg') center center no-repeat; /* Background image with office and trees */
+    background-size: cover; /* Ensures the image covers the entire section */
+    display: flex; /* Flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* Position for overlay */
+    padding: 0 20px; /* Padding for responsive content */
+    overflow: hidden; /* Prevents content overflow */
+}
+
+    .hero_area::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for better text visibility */
+        z-index: 1; /* Places the overlay below the content */
+    }
+
+.hero_content {
+    color: #ffffff; /* White text color */
+    text-align: center; /* Centers text */
+    z-index: 2; /* Places content above the overlay */
+    max-width: 600px; /* Limits the width of the content */
+}
+
+    .hero_content h1 {
+        font-size: 4rem; /* Large font size for main heading */
+        font-weight: 700; /* Bold font weight */
+        margin-bottom: 20px; /* Space below heading */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for better readability */
+    }
+
+    .hero_content p {
+        font-size: 1.5rem; /* Larger font size for subheading */
+        margin-bottom: 30px; /* Space below subheading */
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7); /* Adds shadow for better readability */
+    }
+
+    .hero_content .btn {
+        padding: 12px 35px; /* Larger padding for button */
+        border-radius: 30px; /* Rounded corners */
+        border: 2px solid #ffffff; /* White border for outline button */
+        color: #ffffff; /* White text color */
+        background: transparent; /* Transparent background */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+    }
+
+        .hero_content .btn:hover {
+            background-color: #ffffff; /* White background on hover */
+            color: #000000; /* Black text on hover */
+        }
+
+.about_section,   .contact_section {
+    padding: 60px 0;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+}
+
+/* Preferred Partners Section */
+.portfolio_section {
+    background-color: black; /* Light background color */
+    padding: 60px 0;
+}
+
+    .portfolio_section h2 {
+        font-size: 36px;
+        color: white; /* Dark gray text */
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .portfolio_section p {
+        color: white; /* Medium gray text */
+        margin-bottom: 40px;
+        font-size: 16px;
+    }
+
+.partner_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* White background for logo container */
+    border: 1px solid #dddddd; /* Light gray border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    height: 150px; /* Set a fixed height for consistency */
+}
+
+    .partner_logo img {
+        max-width: 100%; /* Ensures image fits within the container */
+        max-height: 100px; /* Limits the maximum height of images */
+        object-fit: contain; /* Ensures the entire image is visible */
+    }
+
+    .partner_logo:hover {
+        transform: translateY(-5px); /* Subtle upward movement on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+    }
+
+/* Services Section */
+/* Services Section */
+.services_section h2 {
+    color: black; /* Black text for heading */
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.services_section p {
+    color: black; /* Dark gray text for paragraph */
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+.services_section {
+    background-color: #ffffff; /* White background for the section */
+    color: #333333; /* Dark gray text for general content */
+    padding: 60px 0;
+}
+ 
+
+.service_card {
+    background-color: #ffffff; /* White background for service cards */
+    border: 1px solid #dddddd; /* Light gray border to define card edges */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for card depth */
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+    .service_card:hover {
+        transform: translateY(-5px);
+    }
+
+    .service_card i {
+        color: #000000; /* Black color for icons */
+        margin-bottom: 15px;
+    }
+
+/* Services Section */
+services_sections1 {
+    background-color: white; /* Black background */
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+    .services_section1 h2 {
+        font-size: 36px;
+        color: #ffffff; /* White text */
+        margin-bottom: 20px;
+    }
+
+.book_button {
+    padding: 10px 25px;
+    background-color: #ffffff; /* White button background */
+    color: #000000; /* Black text */
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    .book_button:hover {
+        background-color: #dddddd; /* Lighter background on hover */
+        transform: translateY(-3px);
+    }
+
+.services_list {
+    border: 2px dashed #ffffff; /* White dashed border */
+    padding: 20px;
+    background-color: #000000; /* Black background */
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 20px; /* Rounded corners for the entire list */
+    position: relative;
+    overflow: hidden;
+}
+
+    .services_list ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+.service_item {
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    border-radius: 15px; /* Rounded corners for each service item */
+}
+
+    .service_item:hover {
+        background-color: #111111; /* Darker black background on hover */
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+    }
+
+.service_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ffffff; /* White border under each item */
+    cursor: pointer;
+    border-radius: 15px; /* Rounded corners for the header */
+    transition: background-color 0.3s ease;
+}
+
+.service_title {
+    font-size: 18px;
+    color: #ffffff; /* White text */
+}
+
+.toggle_button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff; /* White text */
+    transition: transform 0.3s ease;
+}
+
+    .toggle_button:hover {
+        transform: scale(1.2);
+    }
+
+.service_description {
+    display: none; /* Initially hidden */
+    font-size: 16px;
+    color: #dddddd; /* Light gray text */
+    padding: 10px 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    border-radius: 15px; /* Rounded corners for the description */
+}
+
+.service_item.active .service_description {
+    display: block;
+    max-height: 200px;
+    opacity: 1;
+}
+
+.view-more-button {
+    background-color: #007bff; /* Primary blue color */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px;
+    border-radius: 30px; /* Rounded corners */
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+    .view-more-button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+        transform: translateY(-2px); /* Slight upward movement on hover */
+    }
+/* CSS for Toggle Effect */
+.service_content {
+    display: none; /* Hidden by default */
+    transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+    .service_content.show {
+        max-height: 500px; /* Set a reasonable maximum height */
+        opacity: 1;
+        display: block; /* Show content on toggle */
+    }
+
+
+
+/* Contact Section */
+.contact_section {
+    background-color: white; /* White background */
+    color: #000000; /* Black text */
+    padding: 60px 0;
+}
+
+    .contact_section h2 {
+        color: black; /* Black text for heading */
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .contact_section p {
+        color: black; /* Dark gray text for paragraph */
+        margin-bottom: 40px;
+        font-size: 16px;
+    }
+
+    .contact_section .form-control {
+        background-color: #ffffff; /* White background for input fields */
+        border: 1px solid #ddd; /* Light gray border */
+        color: #333333; /* Dark gray text for input */
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+        .contact_section .form-control:focus {
+            border-color: wheat; /* Black border on focus */
+            box-shadow: none;
+        }
+
+    .contact_section .btn-primary {
+        background-color: sandybrown; /* Black button background */
+        border-color: #000000; /* Black border */
+        border-radius: 5px;
+        color: #ffffff; /* White text */
+        padding: 10px 30px;
+        transition: background-color 0.3s ease;
+    }
+
+        .contact_section .btn-primary:hover {
+            background-color: black; /* Darker black on hover */
+            border-color: forestgreen; /* Darker border on hover */
+        }
+
+
+.footer_section {
+    background-color:  black; /* Black background */
+    color: #ffffff; /* White text */
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+    .footer_section h5 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #ffffff; /* White text for headings */
+    }
+
+    .footer_section ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
+        .footer_section ul li {
+            margin-bottom: 10px;
+        }
+
+            .footer_section ul li a {
+                color: #ffffff; /* White text color for links */
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+                .footer_section ul li a:hover {
+                    color: #fec913; /* Accent color on hover */
+                }
+
+.social_links .list-inline-item {
+    margin-right: 15px;
+}
+
+    .social_links .list-inline-item a {
+        font-size: 18px;
+        color: #ffffff; /* White text color for social icons */
+        transition: color 0.3s ease;
+    }
+
+        .social_links .list-inline-item a:hover {
+            color: #fec913; /* Accent color on hover */
+        }
+
+.footer_section i {
+    margin-right: 8px;
+    color: #fec913; /* Accent color for icons */
+}
+
+.footer_section p {
+    margin: 0;
+    color: #ffffff; /* White text for copyright */
+    font-size: 14px;
+}
+

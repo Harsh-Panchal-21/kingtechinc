@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Services</title>
+    <!-- Include Bootstrap and FontAwesome for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Global Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Service Content Toggle Styling */
+        .service_content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+            background-color: #ffffff;
+            padding: 0 15px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        /* Service Panel Header */
+        .service_header {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service_header:hover {
+            background-color: #0056b3;
+        }
+
+        /* Toggle Button Styling */
+        .toggle_button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Service Panel Styling */
+        .service_panel {
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* List Item Styling */
+        .service_content ul {
+            padding: 20px;
+            margin: 0;
+        }
+
+        .service_content li {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .service_content li i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        /* Image Styling */
+        .image-section {
+            text-align: center;
+        }
+
+        .image-section img {
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        /* Section Header Styling */
+        .services_section h2 {
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+
+        .services_section p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        /* Footer Styling */
+        .footer_section {
+            background-color: #222;
+            color: #ffffff;
+            padding: 40px 0;
+        }
+
+        .footer_section h5 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .footer_section ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .footer_section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer_section ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer_section ul li a:hover {
+            color: #ffffff;
+        }
+
+        .social_links .list-inline-item {
+            margin-right: 15px;
+        }
+
+        .social_links .list-inline-item a {
+            font-size: 18px;
+            color: #bbb;
+            transition: color 0.3s ease;
+        }
+
+        .social_links .list-inline-item a:hover {
+            color: #ffffff;
+        }
+
+        .footer_section i {
+            margin-right: 8px;
+            color: #white;
+        }
+
+        .footer_section p {
+            margin: 0;
+            color: white;
+            font-size: 14px;
+        }
+        /* Navigation Bar */
+.custom_navbar {
+    background: linear-gradient(90deg, #000000 0%, #333333 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    transition: top 0.3s ease; /* Smooth transition for show/hide */
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+    .custom_navbar .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .custom_navbar .navbar-nav .nav-link {
+        color: #ffffff;
+        margin: 0 15px;
+        font-weight: 500;
+        font-size: 1rem;
+        text-transform: uppercase;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+        .custom_navbar .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            left: 0;
+            bottom: -5px;
+            background-color: #fec913;
+            transition: width 0.3s ease;
+        }
+
+        .custom_navbar .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .custom_navbar .navbar-nav .nav-link:hover {
+            color: #fec913;
+        }
+
+    .custom_navbar .navbar-toggler {
+        border: none;
+        background-color: transparent;
+    }
+
+    .custom_navbar .navbar-toggler-icon {
+        background-image: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+        background-size: cover;
+    }
+
+@media (max-width: 991px) {
+    .custom_navbar .navbar-nav {
+        background-color: #000000;
+        padding: 15px;
+    }
+
+        .custom_navbar .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+}
+    </style>
+</head>
+
+<body>
+
+    <header class="header_section">
+        <nav class="navbar navbar-expand-lg custom_navbar fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <span>King Tech Inc</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> <br> <br><br> 
+
+    <!-- New Services Section -->
+    <section id="more-services" class="services_section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Kingtech Services</h2>
+                <p>We focus on advising businesses on how best to use information technology to meet their business objectives while maximizing value.</p>
+            </div>
+             <div class="image-section">
+     <img src="images/it-suppor.png" class="img-fluid" alt="Service Example"> </div> <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Managed IT Services Panel -->
+                    <div class="service_panel">
+                        <div class="service_header">
+                            <h4 class="mb-0">Managed IT Services</h4>
+                            <button class="toggle_button">+</button>
+                        </div>
+                        <div class="service_content">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> Network Security.</li>
+                                <li><i class="fas fa-check-circle"></i> Server Installation, Configuration, and Support.</li>
+                                <li><i class="fas fa-check-circle"></i> End-User PC/Laptop Installation and Support.</li>
+                                <li><i class="fas fa-check-circle"></i> Software & Hardware Installation and Support.</li>
+                                <li><i class="fas fa-check-circle"></i> Disaster Recovery Planning and Solutions.</li>
+                                <li><i class="fas fa-check-circle"></i> Managed Services with Real-Time Updates and Alerts.</li>
+                                <li><i class="fas fa-check-circle"></i> Cloud Secure Managed Exchange & Off-Site Data Storage.</li>
+                                <li><i class="fas fa-check-circle"></i> Microsoft Office 365.</li>
+                                <li><i class="fas fa-check-circle"></i> Remote Help Desk Support.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Custom Website Design & Development Panel -->
+                    <div class="service_panel">
+                        <div class="service_header">
+                            <h4 class="mb-0">Custom Website Design & Development</h4>
+                            <button class="toggle_button">+</button>
+                        </div>
+                        <div class="service_content">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> Responsive and User-Friendly Designs.</li>
+                                <li><i class="fas fa-check-circle"></i> Custom integration including tailored software development.</li>
+                                <li><i class="fas fa-check-circle"></i> Graphic Design.</li>
+                                <li><i class="fas fa-check-circle"></i> DNS & Domain Management.</li>
+                                <li><i class="fas fa-check-circle"></i> Search Engine Optimization (SEO).</li>
+                                <li><i class="fas fa-check-circle"></i> Mobile App Development.</li>
+                                <li><i class="fas fa-check-circle"></i> eCommerce Development.</li>
+                                <li><i class="fas fa-check-circle"></i> Website Training.</li>
+                                <li><i class="fas fa-check-circle"></i> Routine and requested website maintenance.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Video Surveillance Panel -->
+                    <div class="service_panel">
+                        <div class="service_header">
+                            <h4 class="mb-0">Video Surveillance</h4>
+                            <button class="toggle_button">+</button>
+                        </div>
+                        <div class="service_content">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> 1080P Cameras.</li>
+                                <li><i class="fas fa-check-circle"></i> Low-light Performance.</li>
+                                <li><i class="fas fa-check-circle"></i> Remote in Mobile App.</li>
+                                <li><i class="fas fa-check-circle"></i> System Installation and Set Up.</li>
+                                <li><i class="fas fa-check-circle"></i> 24/7 service support.</li>
+                                <li><i class="fas fa-check-circle"></i> Shareable Video Footage.</li>
+                                <li><i class="fas fa-check-circle"></i> View live or recorded videos.</li>
+                                <li><i class="fas fa-check-circle"></i> Available in interior and exterior cameras.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Phone Systems Panel -->
+                    <div class="service_panel">
+                        <div class="service_header">
+                            <h4 class="mb-0">Cloud Phone Systems</h4>
+                            <button class="toggle_button">+</button>
+                        </div>
+                        <div class="service_content">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> Cloud-based voice (VoIP) services.</li>
+                                <li><i class="fas fa-check-circle"></i> Voicemail-to-email.</li>
+                                <li><i class="fas fa-check-circle"></i> Forward incoming call from your office line to your mobile device.</li>
+                                <li><i class="fas fa-check-circle"></i> Compatible with Office 365.</li>
+                                <li><i class="fas fa-check-circle"></i> 24/7 service support and a 99.999% uptime SLA.</li>
+                                <li><i class="fas fa-check-circle"></i> File backup.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <!-- Point of Sale Systems Panel -->
+                    <div class="service_panel">
+                        <div class="service_header">
+                            <h4 class="mb-0">Point of Sale Systems</h4>
+                            <button class="toggle_button">+</button>
+                        </div>
+                        <div class="service_content">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> Customized Point of Sale systems.</li>
+                                <li><i class="fas fa-check-circle"></i> Mobile and Stationary devices available.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Network Support & Cloud Services -->
+                    <div class="service_panel">
+                        <div class="service_header">
+                            <h4 class="mb-0">Network Support & Cloud Services</h4>
+                            <button class="toggle_button">+</button>
+                        </div>
+                        <div class="service_content">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> Comprehensive network support and cloud services to ensure seamless connectivity and productivity for your business.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Surveillance Systems & Remote Accessibility -->
+                    <div class="service_panel">
+                        <div class="service_header">
+                            <h4 class="mb-0">Surveillance Systems & Remote Accessibility</h4>
+                            <button class="toggle_button">+</button>
+                        </div>
+                        <div class="service_content">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> Remote monitoring and surveillance systems to provide security and accessibility from anywhere in the world.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Geographic Information Systems -->
+                    <div class="service_panel">
+                        <div class="service_header">
+                            <h4 class="mb-0">Geographic Information Systems</h4>
+                            <button class="toggle_button">+</button>
+                        </div>
+                        <div class="service_content">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> Customized GIS solutions that provide insights and mapping capabilities to improve decision-making processes.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                              <!-- Geographic Information Systems -->
+          <div class="service_panel">
+              <div class="service_header">
+                  <h4 class="mb-0">POS Systems</h4>
+                  <button class="toggle_button">+</button>
+              </div>
+              <div class="service_content">
+                  <ul class="list-unstyled">
+                      <li><i class="fas fa-check-circle"></i> Modern point-of-sale systems that streamline transactions and provide detailed analytics for your business.</li>
+                  </ul>
+              </div>
+          </div>
+
+
+                    <!-- Example Image -->
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer_section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-md-4">
+                    <h5>About King Tech</h5>
+                    <p>King Technology provides top-notch IT services, from network support to custom software development, to businesses of all sizes.</p>
+                    <ul class="social_links list-inline mt-3">
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#about" class="text-white">About Us</a></li>
+                        <li><a href="#services" class="text-white">Services</a></li>
+                        <li><a href="#portfolio" class="text-white">Portfolio</a></li>
+                        <li><a href="#contact" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info Section -->
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt"></i> 3 N Old State Capitol Plaza, Springfield, IL 62701</li>
+                        <li><i class="fas fa-phone"></i> +1 217-522-6700</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@kingtech.net" class="text-white">info@kingtech.net</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 King Technology Inc. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include Bootstrap and JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to Toggle Service Content -->
+    <script>
+        document.querySelectorAll('.toggle_button').forEach(button => {
+            button.addEventListener('click', () => {
+                const serviceContent = button.closest('.service_panel').querySelector('.service_content');
+
+                // Toggle the display of the service content
+                if (serviceContent.style.maxHeight && serviceContent.style.maxHeight !== '0px') {
+                    serviceContent.style.maxHeight = '0';
+                    button.textContent = '+';
+                } else {
+                    serviceContent.style.maxHeight = serviceContent.scrollHeight + 'px';
+                    button.textContent = '-';
+                }
+            });
+        });
+    </script>
+
+    <!-- Navbar Show/Hide on Scroll -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.custom_navbar');
+
+        window.addEventListener('scroll', function () {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down
+                navbar.style.top = '-80px'; // Hide the navbar by moving it up
+            } else {
+                // Scrolling up
+                navbar.style.top = '0'; // Show the navbar
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scrolling values
+        });
+    </script>
+</body>
+
+</html>
