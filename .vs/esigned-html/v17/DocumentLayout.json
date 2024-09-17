@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\more-services.html||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:more-services.html||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\appointment.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appointment.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\ads.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ads.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\more-services.html||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:more-services.html||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\about.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -21,6 +25,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\contact.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:contact.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\css\\style.css.map||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -43,32 +51,56 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "more-services.html",
-              "DocumentMoniker": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\more-services.html",
-              "RelativeDocumentMoniker": "more-services.html",
-              "ToolTip": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\more-services.html",
-              "RelativeToolTip": "more-services.html",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAcwHMAAAAcAAAA",
+              "Title": "appointment.html",
+              "DocumentMoniker": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\appointment.html",
+              "RelativeDocumentMoniker": "appointment.html",
+              "ToolTip": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\appointment.html",
+              "RelativeToolTip": "appointment.html",
+              "ViewState": "AQIAAIMAAAAAAAAAAAAkwJMAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-09-11T16:15:22.58Z",
+              "WhenOpened": "2024-09-11T21:15:45.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ads.html",
+              "DocumentMoniker": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\ads.html",
+              "RelativeDocumentMoniker": "ads.html",
+              "ToolTip": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\ads.html",
+              "RelativeToolTip": "ads.html",
+              "ViewState": "AQIAAKQAAAAAAAAAAAAkwLwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-11T20:34:11.349Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "more-services.html",
+              "DocumentMoniker": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\more-services.html",
+              "RelativeDocumentMoniker": "more-services.html",
+              "ToolTip": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\more-services.html",
+              "RelativeToolTip": "more-services.html",
+              "ViewState": "AQIAAOMAAAAAAAAAAAAcwAIBAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-11T16:15:22.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "about.html",
               "DocumentMoniker": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\about.html",
               "RelativeDocumentMoniker": "about.html",
               "ToolTip": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\about.html",
               "RelativeToolTip": "about.html",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-09-11T15:51:23.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-11T15:51:23.847Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "contact.html",
               "DocumentMoniker": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\contact.html",
               "RelativeDocumentMoniker": "contact.html",
@@ -76,12 +108,11 @@
               "RelativeToolTip": "contact.html",
               "ViewState": "AQIAAD8AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-09-11T15:51:16.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-11T15:51:16.929Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "style.scss",
               "DocumentMoniker": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\css\\style.scss",
               "RelativeDocumentMoniker": "css\\style.scss",
@@ -89,12 +120,11 @@
               "RelativeToolTip": "css\\style.scss",
               "ViewState": "AQIAAP4BAAAAAAAAAAAkwBECAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
-              "WhenOpened": "2024-09-05T21:02:03.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-05T21:02:03.464Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "style.css.map",
               "DocumentMoniker": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\css\\style.css.map",
               "RelativeDocumentMoniker": "css\\style.css.map",
@@ -102,31 +132,29 @@
               "RelativeToolTip": "css\\style.css.map",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-09-05T21:02:02.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-05T21:02:02.031Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\css\\style.css",
               "RelativeDocumentMoniker": "css\\style.css",
               "ToolTip": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\css\\style.css",
               "RelativeToolTip": "css\\style.css",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAAAJsAAAAUAAAA",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAwwGkAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-05T16:39:44.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-05T16:39:44.088Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\index.html",
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\hpanchal\\Downloads\\Esigned Free Website Template - Free-CSS.com\\esigned-html\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AQIAAOoAAAAAAAAAAAAAAPsAAAB1AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-09-05T16:25:45.848Z",
               "EditorCaption": ""
