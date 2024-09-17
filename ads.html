@@ -206,9 +206,10 @@
             </div>
             <div class="row">
                 <!-- Gallery Item 1 -->
-                <div class="col-md-4 gallery-item" data-toggle="modal" data-target="#photoModal" data-src="images/ad1.jpg">
+                <div class="col-md-4 gallery-item" data-toggle="modal" data-target="#photoModal" data-src="images/fullbanner.png">
+ 
                     <img src="images/fullbanner.png" alt="Ad Campaign 1">
-                </div> 
+                </div>
                 <!-- PDF Item with Full-size Preview -->
                 <div class="col-md-4 pdf-item" data-toggle="modal" data-target="#pdfModal" data-pdf="pdf/HalfSheetDepartmental.pdf">
                     <i class="fas fa-file-pdf"></i>
@@ -238,7 +239,8 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img src="images/fullbanner.png" alt="Full Size Photo" id="fullSizeImage">
+                     <iframe src="" id="fullSizeImage" frameborder="0"></iframe>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -275,18 +277,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-        // Show full-size image in modal
-        $('.gallery-item').on('click', function () {
-            var imgSrc = $(this).data('src');
-            $('#fullSizeImage').attr('src', imgSrc);
-        });
+        $(document).ready(function () {
+            // Event handler for displaying the full-size image in the modal
+            $('.gallery-item').on('click', function () {
+                var imgSrc = $(this).data('src');  // Get the image source from the data attribute
+                $('#fullSizeImage').attr('src', imgSrc);  // Set the modal image source to the clicked image
+            });
 
-        // Show full-size PDF in modal
-        $('.pdf-item').on('click', function () {
-            var pdfSrc = $(this).data('pdf');
-            $('#pdfPreview').attr('src', pdfSrc);
+            // Event handler for displaying the PDF in the modal
+            $('.pdf-item').on('click', function () {
+                var pdfSrc = $(this).data('pdf');  // Get the PDF source from the data attribute
+                $('#pdfPreview').attr('src', pdfSrc);  // Set the iframe source to the selected PDF
+            });
         });
     </script>
+
+
 
 </body>
 </html>
