@@ -15,6 +15,62 @@
  
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .service_card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            height: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .service_card i {
+                color: #007bff;
+                margin-bottom: 15px;
+            }
+
+            .service_card h4 {
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 10px;
+                min-height: 60px; /* Ensures titles have the same height */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .service_card p {
+                font-size: 16px;
+                margin-bottom: 20px;
+                min-height: 80px; /* Ensures descriptions have the same height */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .service_card:hover {
+                transform: translateY(-5px);
+            }
+
+        .services_section .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .services_section .col-md-4 {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -25,7 +81,7 @@
                 <a class="navbar-brand" href="#">
                     <!-- Replace 'images/logo.png' with the actual path to your logo image -->
                     <!--<img src="images/logo.png" alt="King Tech Inc Logo" style="height: 40px; width: auto; vertical-align: middle;">-->
-                    <span class="ml-2">King Tech Inc</span>
+                    <span class="ml-2">KingTech INC</span>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,11 +94,10 @@
                         <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio"> PARTNERS</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="ads.html">Flyers</a></li>
-                        <li class="nav-item"><a class="nav-link" href="appointment.html"> Appoinment</a></li>
-                        <li class="nav-item"><a class="nav-link" href="careers.html">Careers   </a></li>
+                         <li class="nav-item"><a class="nav-link" href="careers.html">Careers   </a></li>
 
 
 
@@ -57,7 +112,7 @@
     <!-- Hero Section -->
     <section class="hero_area">
         <div class="hero_content">
-            <h1>Welcome to King Tech Inc</h1>
+            <h1>Welcome to KingTech INC</h1>
             <p>Your Trusted Partner for IT Solutions</p>
             <a href="#contact" class="btn btn-outline-light">Contact Us</a>
         </div>
@@ -100,26 +155,18 @@
                     <div class="service_card">
                         <i class="fas fa-laptop-code fa-3x"></i>
                         <h4>Web Development</h4>
-                        <p>Custom web development services to build robust and scalable web solutions.</p>
-                        <p>Full-service website development and reliable hosting solutions to keep you online.</p>
-
+                        <p>Custom web development services to build robust and scalable web solutions.<br /> Full-service website development and reliable hosting solutions to keep you online.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service_card">
                         <i class="fas fa-video fa-3x"></i>
-                        <h4>Security Cameras</h4>
-                        <p>State-of-the-art surveillance systems to protect your business and assets.</p>
+                        <h4>Security Cameras & Surveillance Systems</h4>
+                        <p>Our advanced security cameras, combined with comprehensive surveillance systems, offer high-definition monitoring with remote accessibility. Protect your premises and access real-time footage from anywhere in the world.</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="service_card">
-                        <i class="fas fa-shield-alt fa-3x"></i>
-                        <h4>Surveillance Systems & Remote Accessibility</h4>
-                        <p>Remote access and surveillance systems to monitor your business from anywhere.</p>
-                    </div>
-                </div>
-               
+
+
                 <div class="col-md-4">
                     <div class="service_card">
                         <i class="fas fa-cash-register fa-3x"></i>
@@ -148,9 +195,8 @@
     <section id="portfolio" class="portfolio_section py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2>PREFERRED PARTNERS</h2>
-                <p>Take a look at some of our recent projects</p>
-            </div>
+                <h2>SERVICE PREFERRED PARTNERS</h2>
+             </div>
             <div class="row justify-content-center">
                 <div class="col-md-3 col-sm-4 col-6 mb-4">
                     <div class="partner_logo">
@@ -174,14 +220,10 @@
                 </div>
                 <div class="col-md-3 col-sm-4 col-6 mb-4">
                     <div class="partner_logo">
-                        <img src="images/FirstData.png" class="img-fluid" alt="Partner Logo">
+                        <img src="images/logo.png" class="img-fluid" alt="Partner Logo">
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-4 col-6 mb-4">
-                    <div class="partner_logo">
-                        <img src="images/clover.png" class="img-fluid" alt="Partner Logo">
-                    </div>
-                </div>
+ 
                 <div class="col-md-3 col-sm-4 col-6 mb-4">
                     <div class="partner_logo">
                         <img src="images/webrootlogo.png" class="img-fluid" alt="Partner Logo">
@@ -231,7 +273,7 @@
                 <!-- About Section -->
                 <div class="col-md-4">
                     <h5>About King Tech</h5>
-                    <p>King Technology provides top-notch IT services, from network support to custom software development, to businesses of all sizes.</p>
+                    <p>King Technology provides professional IT services, from network support to custom software development, to businesses of all sizes.</p>
                     <ul class="social_links list-inline mt-3">
                         <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a></li>
                         <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
