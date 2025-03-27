@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -120,6 +120,55 @@
                 transform: translateX(calc(-200px * 8));
             }
         }
+
+        /*.hero_area {
+            background-image: url('images/office-design.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+            filter: brightness(1.3);*/ /* Increase brightness */
+        /*}*/
+
+
+       /* .hero_content h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .hero_content p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+*/
+
+
+        .hero_area {
+            height: 100vh;
+            background-image: url('images/office-design.png');
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero_content h1, .hero_content p {
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
     </style>
 </head>
 
@@ -128,29 +177,29 @@
     <header class="header_section">
         <nav class="navbar navbar-expand-lg custom_navbar fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <!-- Replace 'images/logo.png' with the actual path to your logo image -->
-                    <!--<img src="images/logo.png" alt="King Tech Inc Logo" style="height: 40px; width: auto; vertical-align: middle;">-->
-                    <span class="ml-2">KingTech INC</span>
+                <a class="navbar-brand" href="index.html" style="background: white; padding: 6px 12px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+                    <img src="images/kingtech.png"
+                         alt="King Tech Inc Logo"
+                         style="height: 50px; width: auto; object-fit: contain; filter: brightness(1.2);">
                 </a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon custom-toggler-icon"></span>
                 </button>
 
-
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio"> PARTNERS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Partners</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="ads.html">Flyers</a></li>
-                        <li class="nav-item"><a class="nav-link" href="careers.html">Careers   </a></li>
-
-
-
+                        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
                     </ul>
                 </div>
             </div>
@@ -159,35 +208,69 @@
 
 
 
+
+
     <!-- Hero Section -->
-    <section class="hero_area">
+    <!--<section class="hero_area">
         <div class="hero_content">
-            <h1 style="font-size: 24px;">Welcome to KingTech INC</h1>
+            <h1 style="font-size: 24px;">Welcome to KingTech Inc</h1>
             <p>Your Trusted Partner for IT Solutions</p>
             <a href="#contact" class="btn btn-outline-light">Contact Us</a>
         </div>
+    </section>-->
+    <!-- Hero Section -->
+    <section class="hero_area d-flex align-items-center justify-content-center text-center"
+             style="height: 100vh; background: url('images/office1.jpg') no-repeat center center / cover; color: white; position: relative; padding: 0 20px;">
+
+        <!-- Overlay for better text readability -->
+        <div style="
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    "></div>
+
+        <div class="hero_content" style="z-index: 2; position: relative;">
+            <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 20px;">
+                Welcome to <span style="color: #ffc107;">KingTech Inc</span>
+            </h1>
+            <p style="font-size: 20px; margin-bottom: 30px;">Your Trusted Partner for Innovative IT Solutions</p>
+            <a href="#contact" class="btn btn-lg btn-warning px-5 py-3 shadow">Get in Touch</a>
+        </div>
     </section>
+
+
 
 
     <!-- About Section -->
-    <section id="about" class="about_section py-5">
+    <!-- About Section -->
+    <section id="about" class="about_section py-5" style="background-color: #000; color: #f1f1f1;">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>About Us</h2>
-                    <p>King Technology Inc. provides comprehensive IT Consulting services to public and private sector clients, from large corporations to small offices. Locally owned and operated, we proudly have been serving central Illinois’ technology demands for over 30 years.</p>
-                     <a href="#contact" class="btn btn-primary">Learn More</a>
+            <div class="row align-items-center">
+
+                <!-- Image Side -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="images/w-1.png" class="img-fluid rounded shadow-lg" alt="About King Tech">
                 </div>
-                <div class="col-md-6">
-                    <img src="images/w-1.png" class="img-fluid" alt="About Us">
+
+                <!-- Text Side -->
+                <div class="col-lg-6">
+                    <h2 class="mb-4" style="font-weight: 700; color: #ffc107;">About King Tech Inc</h2>
+                    <p style="font-size: 16px; line-height: 1.8; color: #ccc;">
+                        King Technology Inc. provides comprehensive IT Consulting services to public and private sector clients, from large corporations to small offices. Locally owned and operated, we’ve proudly served Central Illinois’ technology demands for over 30 years.
+                    </p>
+                    <a href="#contact" class="btn btn-outline-warning px-4 py-2 mt-3 shadow-sm">Learn More</a>
                 </div>
+
             </div>
         </div>
     </section>
+
+
     <!-- Services Section -->
     <!-- Services Section -->
     <!-- Services Section -->
-    <section id="services" class="services_section py-5">
+    <!--<section id="services" class="services_section py-5">
         <div class="container">
             <div class="text-center mb-5">
                 <h2>Our Services</h2>
@@ -259,17 +342,110 @@
                     </div>
                 </div>
 
+            </div>-->
+    <!-- View More Services Button -->
+    <!--<div class="text-center mt-4">
+                <a href="more-services.html" class="btn btn-primary view-more-button">View More Services</a>
             </div>
-            <!-- View More Services Button -->
+        </div>
+    </section>-->
+    <!-- old-->
+    <section id="services" class="services_section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Our Services</h2>
+                <p>We offer a wide range of IT services to help you succeed</p>
+            </div>
+            <div class="row">
+
+                <div class="col-md-4">
+                    <a href="custom-software-development.html" class="service_card text-decoration-none text-dark">
+                        <i class="fas fa-code fa-3x"></i>
+                        <h4>Custom Software Development</h4>
+                        <p>Tailored software solutions designed specifically to meet your unique business needs.</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="web-development.html" class="service_card text-decoration-none text-dark">
+                        <i class="fas fa-laptop-code fa-3x"></i>
+                        <h4>Web Development & Programming</h4>
+                        <p>Expert web development and custom programming services to create dynamic, scalable websites and applications.</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="network-support.html" class="service_card text-decoration-none text-dark">
+                        <i class="fas fa-network-wired fa-3x"></i>
+                        <h4>Professional Network & IT Support</h4>
+                        <p>Reliable and comprehensive network and IT support to keep your systems running efficiently.</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="ecommerce.html" class="service_card text-decoration-none text-dark">
+                        <i class="fas fa-shopping-cart fa-3x"></i>
+                        <h4>E-Commerce</h4>
+                        <p>Robust and scalable e-commerce solutions to help you grow your online business efficiently.</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="video-surveillance.html" class="service_card text-decoration-none text-dark">
+                        <i class="fas fa-video fa-3x"></i>
+                        <h4>Video Surveillance Systems</h4>
+                        <p>Advanced video surveillance systems providing secure monitoring and remote accessibility.</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="cloud-phone.html" class="service_card text-decoration-none text-dark">
+                        <i class="fas fa-phone fa-3x"></i>
+                        <h4>Cloud Phone Systems</h4>
+                        <p>Innovative cloud-based phone solutions offering seamless, efficient business communication.</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="it-support-maintenance.html" class="service_card text-decoration-none text-dark">
+                        <i class="fas fa-tools fa-3x"></i>
+                        <h4>IT Support and Maintenance</h4>
+                        <p>Comprehensive technical support and proactive system maintenance to keep your business running smoothly.</p>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="Structured-Cabling.html" class="service_card text-decoration-none text-dark">
+                        <i class="fas fa-ethernet fa-3x"></i>
+                        <h4>Structured Cabling</h4>
+                        <p>Expert structured cabling services ensuring efficient network connectivity and infrastructure.</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="mobile-development.html" class="service_card text-decoration-none text-dark">
+                        <i class="fas fa-mobile-alt fa-3x"></i>
+                        <h4>Mobile Development</h4>
+                        <p>Custom mobile app solutions for Android and iOS, tailored to engage users and grow your business.</p>
+                    </a>
+                </div>
+
+
+
+            </div>
+
+
             <div class="text-center mt-4">
                 <a href="more-services.html" class="btn btn-primary view-more-button">View More Services</a>
             </div>
         </div>
+
+        </div>
+
     </section>
 
 
-
-    <!-- Preferred Partners Section with Carousel -->
+    <!-- New-->
+    <!--Preferred Partners Section with Carousel-->
     <section id="portfolio">
         <div class="container">
             <div class="text-center mb-5">
@@ -279,10 +455,10 @@
 
             <div class="slider">
                 <div class="slide-track">
-                    <!-- Logos repeated twice for infinite scroll -->
+                    <!--Logos repeated twice for infinite scroll-->
                     <div class="partner-logo"><img src="images/dell.png" alt="Dell"></div>
                     <div class="partner-logo"><img src="images/microsoft.png" alt="Microsoft"></div>
-                    <div class="partner-logo"><img src="images/kingtech.png" alt="Intel"></div>
+                    <div class="partner-logo"><img src="images/duoLogo.png" alt="Intel"></div>
                     <div class="partner-logo"><img src="images/Ubiquiti.png" alt="Office"></div>
                     <div class="partner-logo"><img src="images/logo.png" alt="Logo"></div>
                     <div class="partner-logo"><img src="images/webrootlogo.png" alt="Webroot"></div>
@@ -290,10 +466,9 @@
                     <div class="partner-logo"><img src="images/Cisco-logo.png" alt="Dell"></div>
                     <div class="partner-logo"><img src="images/HP.png" alt="Fortinet"></div>
 
-                    <!-- Repeat Logos for Infinite Effect -->
                     <div class="partner-logo"><img src="images/dell.png" alt="Dell"></div>
                     <div class="partner-logo"><img src="images/microsoft.png" alt="Microsoft"></div>
-                    <div class="partner-logo"><img src="images/kingtech.png" alt="Intel"></div>
+                    <div class="partner-logo"><img src="images/duoLogo.png" alt="Intel"></div>
                     <div class="partner-logo"><img src="images/Ubiquiti.png" alt="Office"></div>
                     <div class="partner-logo"><img src="images/logo.png" alt="Logo"></div>
                     <div class="partner-logo"><img src="images/webrootlogo.png" alt="Webroot"></div>
@@ -306,46 +481,57 @@
         </div>
     </section>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS  -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Contact Section -->
-    <section id="contact" class="contact_section py-5">
+    <section id="contact" class="contact_section py-5" style="background: #ffffff;">
         <div class="container">
             <div class="text-center mb-5">
-                <h2>Contact Us</h2>
-                <p>We'd love to hear from you. Reach out to us today!</p>
+                <h2 style="color: #111; font-weight: 700;">Contact Us</h2>
+                <p style="color: #555;">We'd love to hear from you. Reach out to us today!</p>
             </div>
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <form action="">
+
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form action="" style="background: #f9f9f9; padding: 30px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Full Name">
+                            <input type="text" class="form-control rounded-pill px-4 py-3" placeholder="Full Name" style="border: 1px solid #ddd;">
                         </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email Address">
+                        <div class="form-group mt-3">
+                            <input type="email" class="form-control rounded-pill px-4 py-3" placeholder="Email Address" style="border: 1px solid #ddd;">
                         </div>
-                        <div class="form-group">
-                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control rounded px-4 py-3" rows="5" placeholder="Your Message" style="border: 1px solid #ddd;"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-warning px-5 py-2 font-weight-bold shadow-sm">Send Message</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Footer Section -->
     <!-- Footer Section -->
-    <footer class="footer_section py-5">
+    <!-- Footer Section -->
+    <footer class="footer_section py-5" style="background: #1c1c1e; color: #f1f1f1;">
         <div class="container">
             <div class="row">
+
                 <!-- About Section -->
-                <div class="col-md-4">
-                    <h5>About King Tech</h5>
-                    <p>King Technology Inc. provides comprehensive IT Consulting services to public and private sector clients, from large corporations to small offices. Locally owned and operated, we proudly have been serving central Illinois’ technology demands for over 30 years.</p>
-                     <ul class="social_links list-inline mt-3">
+                <div class="col-md-4 mb-4">
+                    <a href="index.html" style="background: white; padding: 6px 12px; border-radius: 10px; display: inline-block; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+                        <img src="images/kingtech.png" alt="King Tech Inc Logo" style="height: 50px; width: auto; object-fit: contain; filter: brightness(1.2);">
+                    </a>
+                    <h5 class="mt-4">About King Tech Inc</h5>
+                    <p style="font-size: 15px; line-height: 1.7;">
+                        King Technology Inc. provides comprehensive IT consulting services to public and private sector clients, from large corporations to small offices. Locally owned and operated, we’ve proudly served central Illinois’ technology needs for over 30 years.
+                    </p>
+                    <ul class="social_links list-inline mt-3">
                         <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a></li>
                         <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
                         <li class="list-inline-item"><a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a></li>
@@ -354,31 +540,31 @@
                 </div>
 
                 <!-- Quick Links Section -->
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Home</a></li>
-                        <li><a href="#about" class="text-white">About Us</a></li>
-                        <li><a href="#services" class="text-white">Services</a></li>
-                        <li><a href="#portfolio" class="text-white">Portfolio</a></li>
-                        <li><a href="#contact" class="text-white">Contact Us</a></li>
+                        <li><a href="index.html" class="text-white d-block py-1">Home</a></li>
+                        <li><a href="index.html#about" class="text-white d-block py-1">About Us</a></li>
+                        <li><a href="index.html#services" class="text-white d-block py-1">Services</a></li>
+                        <li><a href="index.html#portfolio" class="text-white d-block py-1">Portfolio</a></li>
+                        <li><a href="index.html#contact" class="text-white d-block py-1">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact Info Section -->
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <h5>Contact Us</h5>
                     <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt"></i>  3 N Old State Capitol Plaza, Springfield, IL 62701</li>
-                        <li><i class="fas fa-phone"></i> +1 217-522-6700</li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@kingtech.net" class="text-white">info@kingtech.net</a></li>
+                        <li class="py-1"><i class="fas fa-map-marker-alt mr-2"></i> 3 N Old State Capitol Plaza, Springfield, IL 62701</li>
+                        <li class="py-1"><i class="fas fa-phone mr-2"></i> +1 217-522-6700</li>
+                        <li class="py-1"><i class="fas fa-envelope mr-2"></i> <a href="mailto:info@kingtech.net" class="text-white">info@kingtech.net</a></li>
                     </ul>
                 </div>
+
             </div>
-            <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <p>&copy; 2024 King Technology Inc. All Rights Reserved.</p>
-                </div>
+            <hr style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 King Technology Inc. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
