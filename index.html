@@ -1,24 +1,141 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>King Tech Inc</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Include Bootstrap CSS and JavaScript -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
+ 
     <style>
-        .service_card {
+
+ 
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+ 
+
+    .main-navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: transparent;
+      color: white;
+      padding: 30px 5%;
+      display: flex;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      z-index: 999;
+      border-bottom: 1px solid transparent;
+    }
+
+    .main-navbar .logo-text,
+    .main-navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    .main-navbar.scrolled {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      color: black;
+    }
+
+    .main-navbar.scrolled .logo-text,
+    .main-navbar.scrolled a {
+      color: black !important;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: url('images/h.png') center center / cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 5%;
+      position: relative;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .hero .subheading {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #bbb;
+    }
+
+    .hero a {
+      margin-top: 20px;
+      display: inline-block;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .hero a::after {
+      content: '→';
+      margin-left: 10px;
+      transition: margin-left 0.3s ease;
+    }
+
+    .hero a:hover::after {
+      margin-left: 15px;
+    }
+
+ 
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* TAB SELECTOR */
+    .tab-bar {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+      background: rgba(0, 0, 0, 0.3);
+      font-size: 0.9rem;
+    }
+
+    .tab-bar div {
+      color: #ccc;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .tab-bar .active {
+      color: white;
+      font-weight: bold;
+    }
+
+    .tab-bar .active::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: red;
+    }
+     
+    
+    
+    .service_card {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -120,236 +237,182 @@
                 transform: translateX(calc(-200px * 8));
             }
         }
+  
 
-        /*.hero_area {
-            background-image: url('images/office-design.png');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            text-align: center;
-            padding: 100px 0;
-            filter: brightness(1.3);*/ /* Increase brightness */
-        /*}*/
-
-
-       /* .hero_content h1 {
-            font-size: 36px;
-            font-weight: bold;
+        .contact-section {
+            background: url('images/contact.jpg') no-repeat center center / cover;
+            padding: 60px 20px;
+            position: relative;
         }
 
-        .hero_content p {
-            font-size: 20px;
+            .contact-section::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                 backdrop-filter: brightness(100%) blur(0px);
+                z-index: 1;
+            }
+
+        .contact-container {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+            z-index: 2;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+            padding: 30px;
+            min-width: 300px;
+        }
+
+            .contact-info h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+                color:white
+            }
+
+        .info-box {
+            margin-bottom: 30px;
+        }
+
+            .info-box i {
+                color: #fbc02d;
+                margin-right: 10px;
+            }
+
+        .form-group {
             margin-bottom: 20px;
         }
 
-*/
-
-
-        .hero_area {
-            height: 100vh;
-            background-image: url('images/office-design.png');
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero_content h1, .hero_content p {
-            animation: fadeInDown 1s ease-out;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+                padding: 12px 15px;
+                border: none;
+                border-bottom: 2px solid #fff;
+                background: transparent;
+                color: white;
+                font-size: 16px;
             }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
+                .form-group input::placeholder,
+                .form-group textarea::placeholder {
+                    color: white;
+                }
+
+        .btn-submit {
+            background: #fbc02d;
+            color: #000;
+            border: none;
+            padding: 12px 40px;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+         }
+
+            .btn-submit:hover {
+                background: #ffca28;
+            }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
             }
         }
-
     </style>
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header class="header_section">
-        <nav class="navbar navbar-expand-lg custom_navbar fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html" style="background: white; padding: 6px 12px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
-                    <img src="images/kingtech.png"
-                         alt="King Tech Inc Logo"
-                         style="height: 50px; width: auto; object-fit: contain; filter: brightness(1.2);">
-                </a>
+ 
+  
+   <!-- Main Navigation Bar -->
+  <div class="main-navbar">  
+     <div class="nav-left">
+      <i class="fas fa-bars"></i>
+      <span class="logo-text">KINGTECH INC</span>
+    </div>
+    <nav class="nav-center">
+      <a href="#">Industries</a>
+      <a href="#">Consulting Services</a>
+      <a href="#">Digital</a>
+      <a href="#">Insights</a>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#">Explore</a>
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="#"><i class="far fa-bookmark"></i></a>
+    </div>
+ </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="subheading">Agentic AI</div>
+    <h1>WELCOME TO KINGTECH INC<br>Your Trusted Partner for Innovative IT Solutions
+
+    </h1>
+    <a href="#">Read More</a>
+
+    <div class="scroll-indicator">
+      Scroll
+      <i class="fas fa-chevron-down"></i>
+    </div>
+
+    <!-- Bottom Tabs -->
+    <div class="tab-bar">
+      <div>Customer Experience</div>
+      <div>Humanoid Robots</div>
+      <div>Commercial Excellence</div>
+      <div class="active">Agentic AI</div>
+    </div>
+  </section>
 
 
 
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon custom-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Partners</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ads.html">Flyers</a></li>
-                        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-
-
-
-
-    <!-- Hero Section -->
-    <!--<section class="hero_area">
-        <div class="hero_content">
-            <h1 style="font-size: 24px;">Welcome to KingTech Inc</h1>
-            <p>Your Trusted Partner for IT Solutions</p>
-            <a href="#contact" class="btn btn-outline-light">Contact Us</a>
+<!-- Fancy About Section -->
+<section id="about" class="about_section py-5" style="background: linear-gradient(to right, #0c0c2e, #1a1a3d); color: #fff;">
+    <div class="container">
+      <div class="row align-items-center">
+  
+        <!-- Image Side with Animation -->
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);">
+            <img src="images/w-1.png" class="img-fluid animate__animated animate__fadeInLeft" alt="About King Tech">
+          </div>
         </div>
-    </section>-->
-    <!-- Hero Section -->
-    <section class="hero_area d-flex align-items-center justify-content-center text-center"
-             style="height: 100vh; background: url('images/office1.jpg') no-repeat center center / cover; color: white; position: relative; padding: 0 20px;">
-
-        <!-- Overlay for better text readability -->
-        <div style="
-        position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        z-index: 1;
-    "></div>
-
-        <div class="hero_content" style="z-index: 2; position: relative;">
-            <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 20px;">
-                Welcome to <span style="color: #ffc107;">KingTech Inc</span>
-            </h1>
-            <p style="font-size: 20px; margin-bottom: 30px;">Your Trusted Partner for Innovative IT Solutions</p>
-            <a href="#contact" class="btn btn-lg btn-warning px-5 py-3 shadow">Get in Touch</a>
+  
+        <!-- Text Side with Highlights -->
+        <div class="col-lg-6">
+          <h2 class="mb-3 fw-bold" style="color: #ffc107;">Empowering IT for Over 30 Years</h2>
+          <p style="font-size: 17px; line-height: 1.8; color: #ddd;">
+            <strong>King Technology Inc.</strong> delivers tailored IT solutions and consulting services for businesses and organizations of all sizes. Locally rooted and client-focused, we’ve proudly supported Central Illinois with technology services that drive results.
+          </p>
+          <ul style="list-style: none; padding: 0; margin-top: 20px;">
+            <li><i class="fas fa-check-circle text-warning me-2"></i> Custom Software & App Development</li>
+            <li><i class="fas fa-check-circle text-warning me-2"></i> Reliable Network & IT Support</li>
+            <li><i class="fas fa-check-circle text-warning me-2"></i> Trusted by Enterprises & Small Businesses</li>
+          </ul>
+          <a href="#contact" class="btn btn-warning text-dark fw-bold px-4 py-2 mt-4 shadow-sm">Contact Us</a>
         </div>
-    </section>
+  
+      </div>
+    </div>
+  </section>
+  
+  <!-- Add Animate.css for animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
 
-
-
-
-    <!-- About Section -->
-    <!-- About Section -->
-    <section id="about" class="about_section py-5" style="background-color: #000; color: #f1f1f1;">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <!-- Image Side -->
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="images/w-1.png" class="img-fluid rounded shadow-lg" alt="About King Tech">
-                </div>
-
-                <!-- Text Side -->
-                <div class="col-lg-6">
-                    <h2 class="mb-4" style="font-weight: 700; color: #ffc107;">About King Tech Inc</h2>
-                    <p style="font-size: 16px; line-height: 1.8; color: #ccc;">
-                        King Technology Inc. provides comprehensive IT Consulting services to public and private sector clients, from large corporations to small offices. Locally owned and operated, we’ve proudly served Central Illinois’ technology demands for over 30 years.
-                    </p>
-                    <a href="#contact" class="btn btn-outline-warning px-4 py-2 mt-3 shadow-sm">Learn More</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Services Section -->
-    <!-- Services Section -->
-    <!-- Services Section -->
-    <!--<section id="services" class="services_section py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2>Our Services</h2>
-                <p>We offer a wide range of IT services to help you succeed</p>
-            </div>
-            <div class="row">
-
-                <div class="col-md-4">
-                    <div class="service_card">
-                        <i class="fas fa-code fa-3x"></i>
-                        <h4>Custom Software Development</h4>
-                        <p>Tailored software solutions designed specifically to meet your unique business needs.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="service_card">
-                        <i class="fas fa-laptop-code fa-3x"></i>
-                        <h4>Web Development & Programming</h4>
-                        <p>Expert web development and custom programming services to create dynamic, scalable websites and applications.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="service_card">
-                        <i class="fas fa-network-wired fa-3x"></i>
-                        <h4>Professional Network & IT Support</h4>
-                        <p>Reliable and comprehensive network and IT support to keep your systems running efficiently.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="service_card">
-                        <i class="fas fa-project-diagram fa-3x"></i>
-                        <h4>Program Management</h4>
-                        <p>Strategic program management services ensuring successful project execution and delivery.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="service_card">
-                        <i class="fas fa-video fa-3x"></i>
-                        <h4>Video Surveillance Systems</h4>
-                        <p>Advanced video surveillance systems providing secure monitoring and remote accessibility.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="service_card">
-                        <i class="fas fa-phone fa-3x"></i>
-                        <h4>Cloud Phone Systems</h4>
-                        <p>Innovative cloud-based phone solutions offering seamless, efficient business communication.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="service_card">
-                        <i class="fas fa-hashtag fa-3x"></i>
-                        <h4>Social Media Management</h4>
-                        <p>Professional social media management services to grow your online presence and engage your audience.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="service_card">
-                        <i class="fas fa-ethernet fa-3x"></i>
-                        <h4>Structured Cabling</h4>
-                        <p>Expert structured cabling services ensuring efficient network connectivity and infrastructure.</p>
-                    </div>
-                </div>
-
-            </div>-->
-    <!-- View More Services Button -->
-    <!--<div class="text-center mt-4">
-                <a href="more-services.html" class="btn btn-primary view-more-button">View More Services</a>
-            </div>
-        </div>
-    </section>-->
-    <!-- old-->
+    
     <section id="services" class="services_section py-5">
         <div class="container">
             <div class="text-center mb-5">
@@ -486,37 +549,52 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Contact Section -->
-    <section id="contact" class="contact_section py-5" style="background: #ffffff;">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 style="color: #111; font-weight: 700;">Contact Us</h2>
-                <p style="color: #555;">We'd love to hear from you. Reach out to us today!</p>
+
+    <section class="contact-section">
+        <div class="contact-container">
+
+            <!-- LEFT SIDE INFO -->
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+ 
+                <div class="info-box">
+                    <p style="color:blue" ; > <i class="material-icons">call</i> 1 (234) 567-891, 1 (234) 987-654</p>
+                </div>
+
+                <div class="info-box">
+                    <p><i class="material-icons">location_on</i> 121 Rock Street, 21 Avenue, New York, NY 92103</p>
+                </div>
+
+                <div class="info-box">
+                    <p><i class="material-icons">schedule</i> Mon–Fri: 10am–8pm<br>Sat, Sun: Closed</p>
+                </div>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <form action="" style="background: #f9f9f9; padding: 30px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
-                        <div class="form-group">
-                            <input type="text" class="form-control rounded-pill px-4 py-3" placeholder="Full Name" style="border: 1px solid #ddd;">
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="email" class="form-control rounded-pill px-4 py-3" placeholder="Email Address" style="border: 1px solid #ddd;">
-                        </div>
-                        <div class="form-group mt-3">
-                            <textarea class="form-control rounded px-4 py-3" rows="5" placeholder="Your Message" style="border: 1px solid #ddd;"></textarea>
-                        </div>
-                        <div class="text-center mt-4">
-                            <button type="submit" class="btn btn-warning px-5 py-2 font-weight-bold shadow-sm">Send Message</button>
-                        </div>
-                    </form>
-                </div>
+            <!-- RIGHT SIDE FORM -->
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Address">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">SUBMIT</button>
+                </form>
             </div>
         </div>
     </section>
 
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Footer Section -->
-    <!-- Footer Section -->
+
     <!-- Footer Section -->
     <footer class="footer_section py-5" style="background: #1c1c1e; color: #f1f1f1;">
         <div class="container">
@@ -569,23 +647,7 @@
         </div>
     </footer>
 
-    <script>
-        let lastScrollTop = 0;
-        const navbar = document.querySelector('.custom_navbar');
-
-        window.addEventListener('scroll', function () {
-            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (currentScroll > lastScrollTop) {
-                // Scrolling down
-                navbar.style.top = '-80px'; // Hide the navbar by moving it up
-            } else {
-                // Scrolling up
-                navbar.style.top = '0'; // Show the navbar
-            }
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scrolling values
-        });
-    </script>
+ 
 
     <script>
         document.querySelectorAll('.service_header').forEach(header => {
@@ -607,7 +669,26 @@
         });
     </script>
 
+ 
+<script>
+    // Scroll Effect
+    window.addEventListener('scroll', function () {
+  const navbar = document.querySelector('.main-navbar');
+  const topbar = document.querySelector('.top-bar');
 
+  if (window.scrollY > 0) {
+    navbar.classList.add('scrolled');
+    topbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+    topbar.classList.remove('scrolled');
+  }
+});
+
+ 
+  </script>
+  
+  
     <!-- Include Bootstrap CSS and JavaScript -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
