@@ -1,283 +1,295 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | King Tech Inc</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://kit.fontawesome.com/a2d6a0a277.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <title>Esigned</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    
+    }
+    .main-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  color: white;
+  padding: 30px 5%;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
 
-  <!-- slider stylesheet -->
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+.main-navbar .logo-text,
+.main-navbar a {
+  color: black;
+  margin: 0 10px;
+  font-size: 1.125rem; /* 18px */
+  text-decoration: none;
+  font-weight: bold;
+}
+ 
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    .main-navbar.scrolled .logo-text,
+    .main-navbar.scrolled a {
+      color: black !important;
+    }
+    .about-header {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+    .about-header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    .about-header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .about-section {
+      padding: 80px 0;
+      background-color: #fff;
+    }
+
+    .about-section img {
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-section h2 {
+      font-weight: 700;
+      color: #302b63;
+    }
+
+    .about-section ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .about-section ul li {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .about-section ul li i {
+      color: #ffc107;
+      margin-right: 10px;
+    }
+
+    .call-to-action {
+      background: linear-gradient(135deg, #302b63, #24243e);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .call-to-action h3 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .call-to-action a {
+      margin-top: 20px;
+      display: inline-block;
+      background: #ffc107;
+      color: #000;
+      padding: 14px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .call-to-action a:hover {
+      background: #e0a800;
+      color: white;
+    }
+ 
+@media (max-width: 768px) {
+  #mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    flex-direction: column;
+  }
+
+  #mobile-menu a {
+    padding: 0.75rem 0;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-navbar {
+    padding: 20px 3%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-navbar img {
+    height: 40px;
+  }
+} 
+
+  </style>
 </head>
-
-<body class="sub_page">
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              Esigned
-            </span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="do.html"> What we do </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="portfolio.html"> Portfolio </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact us</a>
-                </li>
-              </ul>
-              <div class="user_option">
-                <a href="">
-                  <img src="images/user.png" alt="">
-                </a>
-                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
-
-
-  <!-- who section -->
-
-  <section class="who_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="img-box">
-            <img src="images/who-img.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-md-7">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                WHO WE ARE?
-              </h2>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud
-            </p>
-            <div>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+<body>
+  <header class="main-navbar fixed top-0 left-0 w-full z-50 bg-white shadow-md py-4 px-6 flex items-center justify-between relative">
+    <!-- Logo -->
+    <div class="flex items-center gap-3 text-xl font-bold text-gray-900">
+      <img src="images/kingtech.png" alt="King Tech Logo" class="h-10 w-auto">
     </div>
-  </section>
-
-  <!-- end who section -->
-
-
-  <!-- info section -->
-  <section class="info_section ">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="info_contact">
-            <h5>
-              About Shop
-            </h5>
-            <div>
-              <div class="img-box">
-                <img src="images/location-white.png" width="18px" alt="">
-              </div>
-              <p>
-                Address
-              </p>
-            </div>
-            <div>
-              <div class="img-box">
-                <img src="images/telephone-white.png" width="12px" alt="">
-              </div>
-              <p>
-                +01 1234567890
-              </p>
-            </div>
-            <div>
-              <div class="img-box">
-                <img src="images/envelope-white.png" width="18px" alt="">
-              </div>
-              <p>
-                demo@gmail.com
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_info">
-            <h5>
-              Informations
-            </h5>
-            <p>
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="info_insta">
-            <h5>
-              Instagram
-            </h5>
-            <div class="insta_container">
-              <div>
-                <a href="">
-                  <div class="insta-box b-1">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-                <a href="">
-                  <div class="insta-box b-2">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-              </div>
-
-              <div>
-                <a href="">
-                  <div class="insta-box b-3">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-                <a href="">
-                  <div class="insta-box b-4">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <div class="insta-box b-3">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-                <a href="">
-                  <div class="insta-box b-4">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_form ">
-            <h5>
-              Newsletter
-            </h5>
-            <form action="">
-              <input type="email" placeholder="Enter your email">
-              <button>
-                Subscribe
-              </button>
-            </form>
-            <div class="social_box">
-              <a href="">
-                <img src="images/fb.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/twitter.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/linkedin.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/youtube.png" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+  
+    <!-- Mobile Hamburger Icon -->
+    <div class="md:hidden ml-auto block">
+      <button id="menu-toggle" class="text-2xl text-gray-900 focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-  </section>
-
-  <!-- end info_section -->
-
-
-  <!-- footer section -->
-  <section class="container-fluid footer_section">
-    <p>
-      &copy; 2020 All Rights Reserved By
-      <a href="https://html.design/">Free Html Templates</a>
-    </p>
-  </section>
-  <!-- footer section -->
-
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- owl carousel script 
-    -->
-  <script type="text/javascript">
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 0,
-      navText: [],
-      center: true,
-      autoplay: true,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        1000: {
-          items: 3
+  
+    <!-- Nav Links -->
+    <nav id="mobile-menu" class="hidden md:flex flex-col md:flex-row gap-6 text-sm font-semibold text-gray-700 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0 shadow md:shadow-none z-50">
+      <a href="index.html" class="hover:text-indigo-600">Home</a>
+      <a href="about.html" class="hover:text-indigo-600">About</a>
+      <a href="index.html#services" class="hover:text-indigo-600">Services</a>
+      <a href="index.html#portfolio" class="hover:text-indigo-600">Portfolio</a>
+      <a href="index.html#faq" class="hover:text-indigo-600">FAQ</a>
+      <a href="#" class="text-indigo-600 font-bold">Contact</a>
+    </nav>
+  </header>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const icon = menuToggle.querySelector('i');
+  
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+  
+    // Optional: Close menu on link click
+    const navLinks = mobileMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          mobileMenu.classList.add('hidden');
+          icon.classList.add('fa-bars');
+          icon.classList.remove('fa-times');
         }
-      }
+      });
     });
   </script>
-  <!-- end owl carousel script -->
+
+
+<br> <br> 
+ 
+  <header class="about-header">
+    <h1 class="animate__animated animate__fadeInDown">About King Tech Inc</h1>
+    <p class="animate__animated animate__fadeInUp">Innovating IT Solutions for Over 30 Years</p>
+  </header>
+
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="images/w-1.png" alt="About King Tech" class="img-fluid animate__animated animate__fadeInLeft">
+        </div>
+        <div class="col-md-6">
+          <h2 class="mb-4 animate__animated animate__fadeInRight">Empowering Businesses Through Technology</h2>
+          <p class="text-muted"> King Technology Inc. provides comprehensive IT consulting services to public and private sector clients, 
+            specializing in the development and management of systems for government programs.</p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Full-Service IT & Network Support</li>
+            <li><i class="fas fa-check-circle"></i> Custom Software & App Development</li>
+            <li><i class="fas fa-check-circle"></i> Cloud Phone & Video Surveillance Systems</li>
+            <li><i class="fas fa-check-circle"></i> E-commerce & Web Development</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="call-to-action">
+    <h3>Ready to Elevate Your Business?</h3>
+    <a href="contact.html">Contact Us Today</a>
+  </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gradient-to-r from-[#f9f9f9] to-[#e8e8e8] text-black py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+          <!-- About Section -->
+          <div>
+            <a href="old.html" class="inline-block bg-white p-2  ">
+              <img src="images/kingtech.png" alt="King Tech Inc Logo" class="h-12 object-contain">
+            </a>
+            <h5 class="mt-6 text-lg font-bold text-black">About King Tech Inc</h5>
+            <p class="text-sm text-black leading-relaxed mt-2">
+              King Technology Inc. provides comprehensive IT consulting services to public and private sector clients. Locally owned and operated, proudly serving Central Illinois’ technology needs for over 30 years.
+            </p>
+            <div class="flex space-x-4 mt-4">
+              <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+      
+          <!-- Quick Links Section -->
+          <div>
+            <h5 class="text-lg font-bold text-black mb-4">Quick Links</h5>
+            <ul class="space-y-2 text-sm">
+              <li><a href="old.html" class="text-black hover:underline">Home</a></li>
+              <li><a href="#it-values" class="text-black hover:underline">About Us</a></li>
+              <li><a href="#services" class="text-black hover:underline">Services</a></li>
+              <li><a href="#portfolio" class="text-black hover:underline">Portfolio</a></li>
+              <li><a href="#contact" class="text-black hover:underline">Contact Us</a></li>
+            </ul>
+          </div>
+      
+          <!-- Contact Info Section -->
+          <div>
+            <h5 class="text-lg font-bold text-black mb-4">Contact Us</h5>
+            <ul class="space-y-3 text-sm">
+              <li class="text-black"><i class="fas fa-map-marker-alt mr-2"></i> 3 N Old State Capitol Plaza, Springfield, IL 62701</li>
+              <li class="text-black"><i class="fas fa-phone mr-2"></i> +1 217-522-6700</li>
+              <li class="text-black"><i class="fas fa-envelope mr-2"></i> <a href="mailto:info@kingtech.net" class="text-black hover:underline">info@kingtech.net</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 text-center text-sm text-black border-t border-black/10 pt-6">
+          &copy; 2025 King Technology Inc. All rights reserved.
+        </div>
+      </footer>
+
 
 </body>
-
 </html>
